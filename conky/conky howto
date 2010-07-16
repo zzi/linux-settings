@@ -1,0 +1,67 @@
+Хотите такую красивую и информативную хреновинку как на скриншоте? У меня есть их!
+
+Установка и настройка Сonky Сolours на Ubuntu 8.10 для чайников ))
+
+1. Устанавливаем Conky
+
+sudo apt-get install conky
+
+2. Устанавливаем  Conky Weather Forecast Python Script (скрипт погоды)
+   
+   2.1 Открываем список репозитариев
+
+sudo gedit /etc/apt/sources.list
+
+   2.2 Вставляем туда строку
+
+deb http://ppa.launchpad.net/m-buck/ubuntu intrepid main
+
+   2.3 Обновление и установка
+
+sudo apt-get update
+
+sudo apt-get install conkyforecast
+
+3. Настройка и конфигурация Conky Weather Forecast Python Script (скрипт погоды)
+
+   3.1 Чтобы погода обновлялась регистрируемся тут http://www.weather.com/services/xmloap.html
+       после регистрации получаем на мыло Partner ID и Registration Code
+   
+   3.2 Копируем дефолтный конфиг в домашнюю папку
+
+cp /usr/share/conkyforecast/conkyForecast.config ~/.conkyForecast.config
+
+   3.3 Правим дефолтный конфиг
+
+gedit ~/.conkyForecast.config
+
+   3.4 Правим дефолный конфиг, в соответствующие строчки копируем значения ваших Partner ID и Registration Code, сохраняем
+
+   3.5 Узнаем локальный код, идем сюда http://xoap.weather.com/search/search?where=Simferopol
+       и видим следующее <loc id="UPXX0054" type="1">Simferopol, Ukraine</loc>, UPXX0054 - то что нам нужно,
+       разумеется в ссылке вместо Simferopol(лучший город на Земле) прописываете латиницей свой город.
+
+4. Устанавливаем  Conky SSL Email Python Script   (скрипт проверки почты)
+
+   4.1 Так как нужный репозиторий у нас уже прописан, просто запускаем
+
+sudo apt-get install conkyemail
+
+5. Установка конфигурации Conky Colours (как на скриншоте)
+ 
+   5.1 Распаковываем приложенный архив, копируем папку conky и кладем её сюда /home/ваш юзер/.scripts
+
+   5.2 Открываем приложенный в архиве файл .conkyrc , в разделе SYSTEM оставляем количество строчек ${font StyleBats:size=16}A${font}   CPU1: ${cpu cpu1}% ${alignr}${cpubar cpu1 8,60} 
+       соответствующее количеству ядер вашего процессора, у меня их четыре.
+       В разделе GMAIL вместо *** выставляете ваш почтовый логин и пароль
+       В разделе СALENDAR в строке ${execp /home/***/.scripts/conky/ConkyCalendar.py} вместо *** прописываете свой юзер-нэйм
+       В разделе NETWORK просутствуют протоколы ppp0, eth0, eth1 если у вас wlan0 то просто пропишите его везде в одной из секций вместо например ppp0
+       B разделе WEATHER выбираете секцию соответствующую вашему сетевому протоколу, в моем случае ${if_existing /proc/net/route ppp0} и везде в location=UPXX0054 вместо позиции UPXX0054(или ???)
+       прописываете свой локальный код  
+   5.3 Установка необходимых шрифтов, берем из приложенного архива папку .fonts и кладем её в домашнюю папку, теперь обновляем кэш шрифтов
+
+fc-cache -v -f
+
+   6. Готово, жмем Alt+F2 и запускаем команду conky
+   7. Наслаждаемся =)     
+

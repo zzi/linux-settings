@@ -1,0 +1,20 @@
+moc_config  - configuration file for MOC (music on console).
+              Rename this file from 'moc_config' to 'config' and place it 
+              into ~/.moc folder
+
+mc_ini      - configuration file for MC (midnight commander).
+              Rename it from 'mc_ini' to 'ini' and place into ~/.mc
+
+/conky      - folder with conky settings.
+              Rename it to '.conky' and place into home directory.
+              To launch conky use /conky/scripts/conky.sh
+/fonts      - Needed to right conky appearance
+              Place .fonts into home directory and install them:
+              fc-cache -v -f
+conky howto - Read this document for installing conkyemail and conkyForecast
+
+vimrc       - Settings for vim.
+              Rename to '.vimrc' and place into home directory.
+
+installed_apps - list of my applications
+

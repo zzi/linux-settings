@@ -1,0 +1,42 @@
+# --- Window Layout & Options --- #
+use_xft yes
+own_window yes
+own_window_colour 234
+own_window_transparent yes
+own_window_type override
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+use_spacer right
+
+# Text alignment, other possible values are commented
+alignment top_left
+#alignment top_right
+#alignment bottom_left
+#alignment bottom_right
+
+gap_x 20
+gap_y 740
+
+# --- Colours, Sizes, Fonts & Margins --- #
+xftfont Verdana:size=8
+xftalpha 1
+update_interval 1.0
+minimum_size 190
+maximum_width 190
+stippled_borders 0
+border_margin 1
+border_width 1
+default_color white 
+
+# --- Text --- #
+draw_outline no
+draw_borders no
+uppercase no
+draw_shades yes
+override_utf8_locale yes
+
+
+TEXT
+${if_running mocp}
+${execp $HOME/.conky/qmmp_playing.py}
+${endif}

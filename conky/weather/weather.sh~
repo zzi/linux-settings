@@ -1,0 +1,14 @@
+#!/usr/bin/perl
+if($fc = `curl -s http://informer.gismeteo.ru/text/36177-1.JS | iconv -f CP1251 -t UTF-8`){
+my $a = substr($fc,372);
+my @vars=split(/</, $a);
+foreach $v (@vars){
+my ($x,$z)=split(/>/, $v);
+if ((defined($z))and($z ne '')){push(@res,$z);}}
+my $city=$res[0];
+my $date=$res[1];
+my $sky=$res[2];
+my $prec=$res[3];
+my $temp=$res[4];
+my $wind=$res[5];
+print "Погода в г. $city: \n $temp, $sky, $prec; \n Ветер: $wind\n";}
