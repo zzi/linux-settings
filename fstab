@@ -1,0 +1,8 @@
+/dev/sr0 swap udf,iso9660 defaults 0 0
+UUID=D07065F37065E0A8             /media/Games     ntfs-3g defaults,auto, remount 0 0
+UUID=01C9AF8356E20780             /media/Media     ntfs-3g defaults, auto, users 0 0
+UUID=6471db48-03de-4b4d-8d7a-9ddf6dcd5904 /home ext4 defaults 0 2
+UUID=f98249d2-4c63-4f7e-91b1-19fdd72de8ca / ext4 defaults 0 1
+UUID=3AE83368E8332195             /media/Windows     ntfs-3g defaults, auto 0 0
+UUID= swap swap sw 0 0
+UUID=01C9AF83547FAD80             /media/Information ntfs-3g defaults, auto, users 0 0
