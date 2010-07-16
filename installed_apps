@@ -25,6 +25,9 @@ phatch
 geany
 gvim
 texmaker
+git
+bzr
+mercurial
 
 [Python]
 django
