@@ -1,5 +1,5 @@
 colorscheme wombat
-
+syntax on
 
 
 " ########## text options ##########
@@ -21,9 +21,12 @@ set pastetoggle=<F11>        " put vim in pastemode - usefull for pasting in con
 set fileformats=unix	     " favorite fileformats
 set encoding=utf-8           " set default-encoding to utf-8
 "set iskeyword+=_,-           " these characters also belong to a word
-"set matchpairs+=<:>          " angle brackets should also being matched by %
+set matchpairs+=<:>          " angle brackets should also being matched by %
 
 "match ErrorMsg '\%>80v.\+'
+
+set cursorline
+set cursorcolumn
 
 
 " ########## visual options ##########
