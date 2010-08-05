@@ -10,6 +10,7 @@ skype
 deluge (bittorrent)
 pidgin
 lastfm
+gajim
 
 [Office tools]
 acroread
@@ -28,12 +29,19 @@ texmaker
 git
 bzr
 mercurial
+nginx
 
 [Python]
 django
+pyhton-flup
 
 [Desktop]
 conky
 emerald
 gxneur
+
+[System]
+screen
 guake
+htop
+mc
