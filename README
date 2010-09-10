@@ -18,3 +18,6 @@ vimrc       - Settings for vim.
 
 installed_apps - list of my applications
 
+/scripts    - my bash scripts for alarm and startup
+
+/nginx      - settings for web-server nginx
