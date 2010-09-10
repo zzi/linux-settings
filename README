@@ -21,3 +21,5 @@ installed_apps - list of my applications
 /scripts    - my bash scripts for alarm and startup
 
 /nginx      - settings for web-server nginx
+
+bash_profile - this file contains settings for 256 colors in terminal
